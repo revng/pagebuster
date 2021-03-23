@@ -6,6 +6,23 @@ We've got you covered! May I introduce **PageBuster**, our tool to gather dumps 
 
 [![asciicast](https://asciinema.org/a/cJH2O5N8w8Dd0GUuHw9kj8CZM.svg)](https://asciinema.org/a/cJH2O5N8w8Dd0GUuHw9kj8CZM)
 
+This code is licensed under [GPLv2](https://github.com/zTehRyaN/pagebuster/blob/main/LICENSE).
+
+Please consider using a **virtual machine** (VirtualBox, VMWare, QEMU, etc.) for testing. The module could be 
+harmful. Avoid killing your machine or production environment by accident.
+
+Make sure you have installed GCC and Linux kernel headers for your kernel. For Debian-based systems:
+```sh
+$ sudo apt install build-essential linux-headers-$(uname -r)
+```
+Then, build the kernel module:
+```sh
+$ cd pagebuster
+$ make
+output
+```
+This will build the module for the kernel you are currently running.
+
 Getting started (Buildroot setup)
 ------------------------------------
 
