@@ -19,7 +19,13 @@ Then, build the kernel module:
 ```sh
 $ cd pagebuster
 $ make
-output
+make -C /lib/modules/5.8.0-45-generic/build M=/path/to/pagebuster/ modules
+make[1]: Entering directory '/usr/src/linux-headers-5.8.0-45-generic'
+  CC [M]  /path/to/pagebuster/pagebuster.o
+  MODPOST /path/to/pagebuster/Module.symvers
+  CC [M]  /path/to/pagebuster/pagebuster.mod.o
+  LD [M]  /path/to/pagebuster/pagebuster.ko
+make[1]: Leaving directory '/usr/src/linux-headers-5.8.0-45-generic'
 ```
 This will build the module for the kernel you are currently running.
 
