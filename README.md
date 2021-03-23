@@ -6,8 +6,6 @@ We've got you covered! May I introduce **PageBuster**, our tool to gather dumps 
 
 [![asciicast](https://asciinema.org/a/cJH2O5N8w8Dd0GUuHw9kj8CZM.svg)](https://asciinema.org/a/cJH2O5N8w8Dd0GUuHw9kj8CZM)
 
-This code is licensed under [GPLv2](https://github.com/zTehRyaN/pagebuster/blob/main/LICENSE).
-
 Please consider using a **virtual machine** (VirtualBox, VMWare, QEMU, etc.) for testing. The module could be 
 harmful. Avoid killing your machine or production environment by accident.
 
@@ -126,3 +124,9 @@ root@buildroot# ls /tmp
 40a000_11       430000_49       456000_87       47c000_125
 
 ```
+
+
+Licensing
+---------
+
+The content of this repository is licensed under the [GPLv2](https://github.com/zTehRyaN/pagebuster/blob/main/LICENSE). Many thanks to Alexei Lozovsky which inspired the ftrace hooking part of the project. 
