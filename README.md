@@ -13,7 +13,7 @@ There are plenty of scenarios in which the ability to dump executable pages is h
 
 For example, think about the case of packed malware samples. Run-time packers are often used by malware-writers to obfuscate their code and hinder static analysis. Packers can be of growing complexity, and, in many cases, a precise moment in time when the entire original code is completely unpacked in memory doesn't even exist.
 
-Therefore, the goals of PageBuster are:
+Therefore, the goals of **PageBuster** are:
 
 1. To dump all the executable pages, without assuming there is a moment in time where the program is fully unpacked;
 2. To do this in a stealthy way (no VM, no ptrace).
@@ -46,7 +46,7 @@ make[1]: Entering directory '/usr/src/linux-headers-5.8.0-45-generic'
   LD [M]  /path/to/pagebuster/pagebuster.ko
 make[1]: Leaving directory '/usr/src/linux-headers-5.8.0-45-generic'
 ```
-This will build the module for the kernel you are currently running. Please be sure the kernel version is lower than v5.9.2 since `PageBuster` has not been tested for newer versions.
+This will build the module for the kernel you are currently running. Please be sure the kernel version is lower than v5.9.2 since **PageBuster** has not been tested for newer versions.
 
 > Please consider using a **virtual machine** (VirtualBox, VMWare, QEMU, etc.) for testing. The module could be 
 harmful. Avoid killing your machine or production environment by accident.
