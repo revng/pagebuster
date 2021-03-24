@@ -49,7 +49,7 @@ make[1]: Leaving directory '/usr/src/linux-headers-5.8.0-45-generic'
 This will build the module for the kernel you are currently running. Please be sure the kernel version is lower than v5.9.2 since `PageBuster` has not been tested for newer versions.
 
 > Please consider using a **virtual machine** (VirtualBox, VMWare, QEMU, etc.) for testing. The module could be 
-harmful. Avoid killing your machine or production environment by accident._
+harmful. Avoid killing your machine or production environment by accident.
 
 
 Usage
