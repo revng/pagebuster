@@ -87,7 +87,7 @@ $ rmmod pagebuster.ko
 Simulated Environment
 ---------------------
 
-If you want to test it on a safe and fast environment, you can use [this](emulation setup).
+If you want to test it on a safe and fast environment, you can use [this](https://github.com/cirosantilli/linux-kernel-module-cheat) emulation setup.
 
 This setup has been mostly tested on Ubuntu.
 Reserve 12Gb of disk and run:
