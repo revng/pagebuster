@@ -97,7 +97,7 @@ cd linux-kernel-module-cheat
 git reset --hard 5ec6595e1f3afb6213ba7c14ab5e4e3893a4089f
 ```
 
-Unlike Ubuntu 20.04 LTS, here `kprobes` is not ebabled by default. So, you must enable it on linux kernel configs.
+Unlike Ubuntu 20.04 LTS, here `kprobes` is not enabled by default. So, you must enable it on linux kernel configs.
 
 ```sh
 cd linux_config
