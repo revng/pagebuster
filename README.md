@@ -102,7 +102,7 @@ Unlike Ubuntu 20.04 LTS, here `kprobes` is not enabled by default. So, you must 
 ```sh
 cd linux_config
 cat <<EOT >> default
--
+
 # Kprobes
 CONFIG_KPROBES=y
 EOT
