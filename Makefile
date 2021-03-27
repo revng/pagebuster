@@ -4,7 +4,7 @@ ccflags-y := \
   -Wno-declaration-after-statement \
   $(CCFLAGS)
 
-obj-m+=ftrace_hook.o
+obj-m+=pagebuster.o
 
 KBUILD_DIR=/lib/modules/$(shell uname -r)/build
 
