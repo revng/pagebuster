@@ -224,10 +224,8 @@ void dump(void *addr, size_t __len)
 		exit(EXIT_FAILURE);
 	}
 
-	// Get the current epoch
 	fscanf(counter, "%d", &current_epoch);
 
-	// Create the proper title
 	FILE *fPtr;
 	char title[100];
 	sprintf(title, "%p_%d", addr, current_epoch);
