@@ -61,7 +61,7 @@ extern struct list_head marea_list;
 /* 
  * Structure for a memory area to be tracked.
  * 
- * Entry of the doubly-linked list.a
+ * Entry of the doubly-linked list.
  * 
  */
 struct marea {
