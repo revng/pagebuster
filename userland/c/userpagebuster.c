@@ -1,5 +1,5 @@
 /* 
- * User PoC of PageBuster
+ * Userspace PoC of PageBuster
  * 
  * Copyright (C) 2021  Matteo Giordano
  * 
