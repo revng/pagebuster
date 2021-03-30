@@ -7,7 +7,7 @@ The interesting thing is that the libraries inside that variable have the highes
 
 For more information, please refer to our [blogpost](https://rev.ng/blog/dump/post.html).
 
-**Note**: This is a proof-of-concept of the real PageBuster. Its utility was only to warm up with the hook/dump logic. It's main limitation is that it will catch only library calls performed by the target process itself, and **not** the ones by the kernel nor the loader.
+**Note**: This is a proof-of-concept of the real PageBuster. Its utility was only to warm up with the hook/dump logic. Main limitation: it will catch only library calls performed by the target process itself, and _not_ the ones by the kernel nor the loader.
 
 Installation
 ------------
