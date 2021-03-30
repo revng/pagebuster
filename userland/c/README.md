@@ -1,4 +1,4 @@
-# PageBuster - User-space prototype
+# PageBuster - A user-space prototype
 
 Rather than immediately getting our hands dirty with the kernel-side implementation, we started with a user-space prototype, and then we moved the logic to the kernel level solution.
 In order to hook/hijack `mmap/mrotect`, we leveraged `LD_PRELOAD` environment variable. It's a simple way to hook library calls in a program. If you are not familiar with it, check out [
