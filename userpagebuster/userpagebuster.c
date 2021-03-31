@@ -1,18 +1,18 @@
-/* 
+/*
  * Userspace PoC of PageBuster
- * 
+ *
  * Copyright (C) 2021  Matteo Giordano
- * 
+ *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
@@ -38,11 +38,11 @@
 #error This example only works in Linux on x86-64.
 #endif
 
-/* 
+/*
  * Structure for a memory area to be tracked.
- * 
+ *
  * Entry of the doubly-linked list.
- * 
+ *
  */
 struct marea {
 
@@ -87,7 +87,7 @@ void handler(int signal, siginfo_t *siginfo, void *contextptr)
 
 		if (def_sigsegv.sa_flags & SA_SIGINFO)
 			(*def_sigsegv.sa_sigaction)(signal, siginfo, contextptr);
-		else 
+		else
 			(*def_sigsegv.sa_handler)(signal);
 
 	/* Custom SIGSEGV handling */
@@ -194,7 +194,7 @@ int mprotect(void *__addr, size_t __len, int __prot)
 
 		/* Adjust the protection flags */
 		__prot &= ~PROT_WRITE;
-	
+
 	/* W and X permissions are put in different time instants */
 	} else if ((__prot == PROT_EXEC) || (__prot == (PROT_EXEC | PROT_READ))) {
 		dump(__addr, __len);
@@ -214,7 +214,7 @@ void dump(void *addr, size_t __len)
 
 		counter = fopen(counter_filename, "r+");
 	} else {
-		
+
 		counter = fopen(counter_filename, "w+");
 		fprintf(counter, "%d", 0);
 	}
