@@ -5,21 +5,17 @@
 .PHONY: all clean
 
 CC := gcc
-LD := ld
 
-PKG = $(shell pkg-config --cflags --libs glib-2.0)
-CFLAGS = -fPIC
-LDFLAGS = -shared -ldl
+GLIB = $(shell pkg-config --cflags --libs glib-2.0)
 
-all: userpagebuster.so
+all: userpagebuster.so example
 
-userpagebuster.o: userpagebuster.c
-	@ echo "Building library ..."
-	@ ${CC} -c $< ${CFLAGS} ${PKG}
+example: example.c
+	@ ${CC} $< -g -o $@
 
-userpagebuster.so: userpagebuster.o
-	@ ${LD} ${LDFLAGS} ${PKG} $< -o $@
+userpagebuster.so: userpagebuster.c
+	@ ${CC} -shared -fPIC ${GLIB} $< -ldl -o $@
 
 clean:
 	@ echo "Cleaning up ..."
-	@ rm *.so *.o
+	@ rm *.so

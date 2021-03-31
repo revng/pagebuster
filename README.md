@@ -24,8 +24,12 @@ Ultimately, PageBuster fits in the context of the rev.ng decompiler. Specificall
 
 For more information, please refer to our [blogpost](https://rev.ng/blog/dump/post.html).
 
+There are two PageBuster implementations: a prototype user-space-only and the full-fledged one, employing with a kernel module.
+The former is described in `userpagebuster/`.
+The rest of this document describes the latter.
+
 Build
-------
+-----
 
 Make sure you have installed GCC and Linux kernel headers for your kernel. For Debian-based systems:
 

@@ -38,6 +38,8 @@
 #error This example only works in Linux on x86-64.
 #endif
 
+void init(void) __attribute__((constructor));
+
 /*
  * Structure for a memory area to be tracked.
  *
@@ -120,7 +122,7 @@ void handler(int signal, siginfo_t *siginfo, void *contextptr)
 }
 
 
-void _init(void)
+void init(void)
 {
 	struct sigaction act;
 	memset(&act, 0, sizeof(struct sigaction));
